@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>KATIK | Kalkulator Matematik</title>
+   <link rel="stylesheet" href="./CSS/index.css">
+</head>
+<body>
+   <!-- TITTLE HEADER -->
+   <header>
+      <h1>Katik</h1>
+      <h6>Kalkulator Matematika</h6>
+   </header>
+   <!-- END TITTLE HEADER -->
+
+
+   <!-- MAIN -->
+   <main>
+      <div class="banner">
+         <h1>Welcome to Katik</h1>
+         <p>Hai sobat, selamat datang di Katik</p>
+         <p>Sebuah web apps sederhana yang befungsi untuk menghitung nilai luas dan keliling bangun datar</p>
+      </div>
+      <div class="selector">
+         <div class="persegi-choose">Persegi</div>
+         <div class="p-panjang-choose">P. Panjang</div>
+      </div>
+      <!-- CALCULATOR -->
+      <div class="calculator">
+         <!-- GAMBAR -->
+         <img src="./assets/bujursangkar.png" alt="" class="gambar">
+         <!-- FORM -->
+         <form class="form-sisi">
+            <input type="text" id="input_sisi" name="input_sisi"  placeholder="Masukkan sisi persegi" required onkeypress="return hanyaAngka(event)">
+            <input type="button" id="btnHitung" value="HITUNG" onclick="hitungLuas();">
+            <button type="reset" class="reset">RESET</button>
+         </form>
+
+         <!-- MAIN-CALC -->
+         <div class="main-calc">
+            <div class="luas-calc">
+               <div class="tittle-calc">Luas Persegi</div>
+               <p class="text-rumus">Rumus Luas Persegi yaitu :</p>
+               <h4 class="rumus">L = s x s</h4>
+               <h4 class="penjelasan">
+                  <p>Dimana :</p>
+                  <p>L = Luas</p>
+                  <p>S = Sisi</p>
+               </h4>
+
+               <div class="hasil">
+                  <h1 class="tittle-hasil">HASIL KALKULATOR</h1>
+                  <p>Luas : <input type="text" id="output_luas" name="output_luas"></p> 
+
+               </div>
+            </div>
+            <div class="keliling-calc">
+               <div class="tittle-calc">Keliling Persegi</div>
+               <p class="text-rumus">Rumus Keliling Persegi yaitu :</p>
+               <h4 class="rumus">L = 4 x s</h4>
+               <h4 class="penjelasan">
+                  <p>Dimana :</p>
+                  <p>K = Keliling</p>
+                  <p>S = Sisi</p>
+               </h4>
+
+               <div class="hasil">
+                  <h1 class="tittle-hasil">HASIL KALKULATOR</h1>
+                  <p>Keliling : <input type="text" id="output_keliling" name="output_keliling"></p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- END CALCULATOR -->
+   </main>
+
+</body>
+<script src="./index.js"></script>
+</html>
